@@ -1,0 +1,16 @@
+{
+  "name": "Ubuntu GUI Machine",
+  "image": "ubuntu:22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "postCreateCommand": "apt update && apt install -y curl sudo nano git",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "coder.code-server"
+      ]
+    }
+  },
+  "forwardPorts": [8080]
+}
